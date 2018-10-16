@@ -6,7 +6,7 @@ import { render } from 'enzyme';
 
 Enzyme.configure({adapter: new Adapter()});
 
-test('Error messages pop up when there is network error', ()=>{
+test('Error message for improper display of Event component', ()=>{
 	const event = {
 		EventID: "123",
 		EventName: "123",
@@ -17,4 +17,5 @@ test('Error messages pop up when there is network error', ()=>{
 	console.log(row.find('div#eventName').text())
 
 	expect(row.find('div#eventName').text()).toEqual("123")
+	
 })
